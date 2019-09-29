@@ -3,7 +3,7 @@
 int main(int argc, char* argv[])
 {
 	int a, b, rst;
-	int i = 0;
+	int i;
 	char opr;
 
 	if (argc > 100)
@@ -16,5 +16,11 @@ int main(int argc, char* argv[])
 		printf("There are no arguments!");
 		return 0;
 	}
+
+	for (i = 0; argv[i]; i++)
+		a = argv[i];
+		b=argv[i+2]
+
+	
 
 }
