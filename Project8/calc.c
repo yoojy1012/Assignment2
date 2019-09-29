@@ -17,10 +17,25 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
-	for (i = 0; argv[i]; i++)
-		a = argv[i];
-		b=argv[i+2]
+	a = atoi(argv[1]);
+	
+	for (i = 1; argv[i]; i++)
+		while (i <= argv[i])
+		{
+			b = argv[2*i + 1];
+			opr = argv[2*i - 1];
 
+			switch (opr)
+			{
+			case '+':rst = a + b;
+				break;
+
+			case '-':rst = a - b;
+				break;
+			}
+
+			rst = a;
+		}
 	
 
 }
