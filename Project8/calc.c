@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 
 int main(int argc, char* argv[])
 {
@@ -8,34 +10,42 @@ int main(int argc, char* argv[])
 
 	if (argc > 100)
 	{
-		printf("Too many arguments!");
+		printf("Too many arguments!\n");
 		return 0;
 	}
-	else if (argc < 1)
+	else if (argc <= 1)
 	{
-		printf("There are no arguments!");
+		printf("There are no arguments!\n");
 		return 0;
 	}
 
 	a = atoi(argv[1]);
-	
-	for (i = 1; argv[i]; i++)
-		while (i <= argv[i])
+	rst = a;
+	if (argc == 2)
+	{
+		a = atoi(argv[1]);
+	}
+	else if (argc % 2 != 0)
+	{
+		printf("Invalid fomula!\n");
+		exit(0);
+	}
+	else
+	{
+		for (i = 2; 2 * i <= argc; i++)
 		{
-			b = argv[2*i + 1];
-			opr = argv[2*i - 1];
-
+			b = atoi(argv[2 * i - 1]);
+			opr = argv[2 * i - 2];
 			switch (opr)
 			{
-			case '+':rst = a + b;
+			case '+':rst = rst + b;
 				break;
-
-			case '-':rst = a - b;
+			case '-':rst = rst - b;
 				break;
-			}
-
-			rst = a;
+			};
 		}
-	
+	}
+	printf("%d", rst);
 
+	return 0;
 }
