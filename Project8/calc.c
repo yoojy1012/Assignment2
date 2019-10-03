@@ -36,13 +36,19 @@ int main(int argc, char* argv[])
 		{
 			b = atoi(argv[2 * i - 1]);
 			opr = argv[2 * i - 2];
+
 			switch (opr)
 			{
-			case '+':rst = rst + b;
+			case '+':
+				rst = rst + b;
 				break;
-			case '-':rst = rst - b;
+			case '-':
+				rst = rst - b;
 				break;
-			};
+			default:
+				printf("Invalid operators!");
+				exit(0);
+			}
 		}
 	}
 	printf("%d", rst);
