@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int a, b, rst;
 	int i;
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 		for (i = 2; 2 * i <= argc; i++)
 		{
 			b = atoi(argv[2 * i - 1]);
-			opr = argv[2 * i - 2];
+			opr = *argv[2 * i - 2];
 
 			switch (opr)
 			{
