@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 	{
 		a = atoi(argv[1]);
 	}
-	else if (argc % 2 != 0)
+	else if (argc % 2 != 0)		//if a formula ends with operator
 	{
 		printf("Invalid fomula!\n");
 		exit(0);
@@ -51,7 +51,13 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
-	printf("%d", rst);
+	printf("%d\n\n", rst);
+
+
+	printf("===========================\n");
+	printf("       Yoo Ju Yeong        \n");
+	printf("   Student ID : 20195922   \n");
+	printf("===========================\n");
 
 	return 0;
 }
